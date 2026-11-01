@@ -24,7 +24,7 @@ body {
 .navbar {
     background-color: #E6E6FA;
     border: 1px solid lightgrey;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -66,6 +66,28 @@ body {
     font-size: 19px;
     color: black;
     text-align: center;
+    position: relative;
+    padding-bottom: 2px;  
+}
+
+.rightside ul li a:hover {
+    color: #6B21A8;
+}
+
+.rightside ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #6B21A8;
+    bottom: 0;
+    left: 0;
+    transition: width 1s;
+}
+
+.rightside ul li a:hover::after {
+    width: 100%;
+
 }
 
 /* header */
@@ -114,7 +136,7 @@ body {
 .header-info {
     width: 50%;
     height: 100%;
-    
+
 }
 
 
